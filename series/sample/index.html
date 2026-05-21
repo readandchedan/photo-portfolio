@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Series — Portfolio</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../../index.html">Portfolio</a></h1>
+        <nav>
+            <a href="../../index.html">Work</a>
+            <a href="../../about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="series-header">
+            <h2>Sample Series</h2>
+            <p>A short description of this series.</p>
+        </section>
+
+        <section class="gallery">
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/1600/1200?random=11"
+                     srcset="https://picsum.photos/800/600?random=11 800w, https://picsum.photos/1600/1200?random=11 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Photo 1"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/1600/1200?random=12"
+                     srcset="https://picsum.photos/800/600?random=12 800w, https://picsum.photos/1600/1200?random=12 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Photo 2"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/1600/1200?random=13"
+                     srcset="https://picsum.photos/800/600?random=13 800w, https://picsum.photos/1600/1200?random=13 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Photo 3"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/1600/1200?random=14"
+                     srcset="https://picsum.photos/800/600?random=14 800w, https://picsum.photos/1600/1200?random=14 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Photo 4"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/1600/1200?random=15"
+                     srcset="https://picsum.photos/800/600?random=15 800w, https://picsum.photos/1600/1200?random=15 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Photo 5"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/1600/1200?random=16"
+                     srcset="https://picsum.photos/800/600?random=16 800w, https://picsum.photos/1600/1200?random=16 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Photo 6"
+                     onclick="openLightbox(this)">
+            </figure>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
