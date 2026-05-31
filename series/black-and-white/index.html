@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black and White — Portfolio</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../../index.html">Portfolio</a></h1>
+        <nav>
+            <a href="../../index.html">Work</a>
+            <a href="../../about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="series-header">
+            <h2>Black and White</h2>
+            <p>A collection of black and white film photography.</p>
+        </section>
+
+        <section class="gallery">
+            <figure class="gallery-item">
+                <img src="images/2021-06-05-edu400-fm10-55micro-37.jpg"
+                     srcset="images/2021-06-05-edu400-fm10-55micro-37.jpg 800w, images/2021-06-05-edu400-fm10-55micro-37.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 1"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/2023-02-04-foma-400-minolta-x370--6.jpg"
+                     srcset="images/2023-02-04-foma-400-minolta-x370--6.jpg 800w, images/2023-02-04-foma-400-minolta-x370--6.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 2"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/DSCF0714.jpg"
+                     srcset="images/DSCF0714.jpg 800w, images/DSCF0714.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 3"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/DSCF0837.jpg"
+                     srcset="images/DSCF0837.jpg 800w, images/DSCF0837.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 4"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/DSCF1011.jpg"
+                     srcset="images/DSCF1011.jpg 800w, images/DSCF1011.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 5"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/DSCF1406.jpg"
+                     srcset="images/DSCF1406.jpg 800w, images/DSCF1406.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 6"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/DSCF4381.jpg"
+                     srcset="images/DSCF4381.jpg 800w, images/DSCF4381.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 7"
+                     onclick="openLightbox(this)">
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/IMG_9805.jpg"
+                     srcset="images/IMG_9805.jpg 800w, images/IMG_9805.jpg 1600w"
+                     sizes="(max-width: 600px) 90vw, 45vw"
+                     loading="lazy"
+                     alt="Black and white photo 8"
+                     onclick="openLightbox(this)">
+            </figure>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
