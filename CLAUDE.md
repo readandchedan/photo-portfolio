@@ -30,7 +30,7 @@ Then open `http://localhost:8000`.
 ## Adding a New Photo Series
 
 1. Create `series/<name>/images/` and place photos there.
-2. Copy `series/sample/index.html` to `series/<name>/index.html` and update:
+2. Copy `series/black-and-white/index.html` to `series/<name>/index.html` and update:
    - `<title>`, series heading, description
    - `src`/`srcset` paths pointing to `images/...`
    - `alt` text for each photo
@@ -40,5 +40,5 @@ Then open `http://localhost:8000`.
 
 - All pages share `css/style.css` and `js/main.js` via relative paths (`../../css/style.css` from series pages).
 - Series pages include a lightbox container (`#lightbox`) that is toggled via `main.js`. Gallery images call `openLightbox(this)` on click.
-- Images use `srcset` for responsive sizing; the CSS gallery grid is `repeat(auto-fill, minmax(350px, 1fr))`.
-- The homepage series grid uses `aspect-ratio: 4 / 3` for card thumbnails.
+- The gallery uses a CSS columns masonry layout (`column-count: 3` on desktop, `2` on tablet, `1` on mobile). Images flow **top-to-bottom within each column**, not left-to-right across rows. `break-inside: avoid` prevents images from splitting across columns.
+- The homepage series grid uses `aspect-ratio: 4 / 3` with `object-fit: cover` for card thumbnails — choose a horizontal image to avoid cropping.
