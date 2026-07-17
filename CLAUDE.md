@@ -45,23 +45,6 @@ Then open `http://localhost:8000`.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which streams a tar archive over SSH to the VPS (mirrors `../vps-tools/deploy-photo-portfolio.sh`). The remote directory is wiped and replaced on each deploy. Excludes `.git`, `.github`, and `CLAUDE.md`.
+Pushing to `main` deploys the site via **Cloudflare Pages** (Workers static assets, Git-connected). Build command is empty (no build step); assets are served from the repo root. The production URL is configured in the Cloudflare dashboard.
 
-Required repository secrets (**Settings → Secrets and variables → Actions**):
-
-- `VPS_SSH_KEY` — private key for `oscar@208.87.133.186` (ed25519 recommended; the matching public key must already be authorized on the VPS).
-- `VPS_HOST` — `208.87.133.186`
-- `VPS_USER` — `oscar`
-- `VPS_DIR` — `/var/www/photo-portfolio`
-- `VPS_KNOWN_HOSTS` *(recommended)* — output of `ssh-keyscan -H 208.87.133.186`. If omitted, the workflow falls back to `ssh-keyscan` at runtime (less secure against MITM).
-
-To generate a dedicated deploy key:
-
-```bash
-ssh-keygen -t ed25519 -f ~/.ssh/photo_portfolio_deploy -C "github-actions:photo-portfolio"
-ssh-copy-id -i ~/.ssh/photo_portfolio_deploy.pub oscar@208.87.133.186
-# paste ~/.ssh/photo_portfolio_deploy into VPS_SSH_KEY
-ssh-keyscan -H 208.87.133.186   # paste into VPS_KNOWN_HOSTS
-```
-
-The `workflow_dispatch` trigger also allows manual runs from the Actions tab.
+A `.assetsignore` file at the repo root excludes `.git`, `.github`, `CLAUDE.md`, and `.DS_Store` from the deployed assets.
